@@ -1,0 +1,18 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /boardts  
+spring:
+  application:
+    name: boardts
+  datasource:
+    url: jdbc:mysql://localhost:3306/boardtest?serverTimezone=Asia/Seoul&useSSL=false
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml   # Mapper XML 위치
+  type-aliases-package: com.comstart.vo;  # VO 패키지 위치
+  configuration:
+    map-underscore-to-camel-case: true 
